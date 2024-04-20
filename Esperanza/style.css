@@ -1,0 +1,72 @@
+/* Fuentes */
+
+@font-face {
+    font-family: "Nunito-Black-900";
+    src: url("Fuentes/Nunito-Black-900.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-BlackItalic-900";
+    src: url("/Fuentes/Nunito-BlackItalic-900.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-Bold-700";
+    src: url("/Fuentes/Nunito-Bold-700.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-BoldItalic-700";
+    src: url("/Fuentes/Nunito-BoldItalic-700.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-ExtraBold-800";
+    src: url("/Fuentes/Nunito-ExtraBold-800.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-ExtraBoldItalic-800";
+    src: url("/Fuentes/Nunito-ExtraBoldItalic-800.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-ExtraLight-275";
+    src: url("/Fuentes/Nunito-ExtraLight-275.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-ExtraLightItalic-275";
+    src: url("/Fuentes/Nunito-ExtraLightItalic-275.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-Italic-400";
+    src: url("/Fuentes/Nunito-Italic-400.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-Light-300";
+    src: url("/Fuentes/Nunito-Light-300.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-LightItalic-300";
+    src: url("/Fuentes/Nunito-LightItalic-300.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-Regular-400";
+    src: url("/Fuentes/Nunito-Regular-400.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-SemiBold-600";
+    src: url("/Fuentes/Nunito-SemiBold-600.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-SemiBoldItalic-600";
+    src: url("/Fuentes/Nunito-SemiBoldItalic-600.ttf");
+}
+

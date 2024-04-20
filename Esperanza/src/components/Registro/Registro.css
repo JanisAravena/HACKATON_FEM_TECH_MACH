@@ -1,14 +1,14 @@
 #boton-registro {
-    font-family: "Nunito Black 900";
+    font-family: "Nunito-BlackItalic-900";
     margin-top: 5%;
     background-color: #8733FF;
     border-color: #8733FF;
 }
 
 .text-center {
-    font-family: "Nunito Regular 400";
+    font-family: "Nunito-BlackItalic-900";
 }
 
 .form-label{
-    font-family: "Nunito-Black-900";
+    font-family: "Nunito-Bold-700";
 }
