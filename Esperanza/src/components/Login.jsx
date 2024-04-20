@@ -46,7 +46,7 @@ function Login() {
             <button className="hidden" id="login" onClick={deactivateContainer}>Ingresa a tu cuenta</button>
           </div>
           <div className="toggle-panel toggle-right">
-            <img src={logoMach} alt="Logo de MACH" width="150" />
+             
             <h1>¡Bienvenido a MACH!</h1>
             <p>Si no estás registrado puedes hacerlo aquí</p>
             <button className="hidden" id="register" onClick={activateContainer}>Registrarse</button>
