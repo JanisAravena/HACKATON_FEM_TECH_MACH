@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style.css'; 
 import logoMach from '../img/logo-mach.png';
+import logoWhite from '../../Imagenes/logo-mach-blanco.png';
 
 function Login() {
   const [isActive, setIsActive] = useState(false);
@@ -23,7 +24,7 @@ function Login() {
           <input type="text" placeholder="Usuario" />
           <input type="email" placeholder="Correo Electrónico" />
           <input type="password" placeholder="Contraseña" />
-          <button type="submit">Registrarse</button>
+          <button style={{ color: 'white'}} type="submit">Registrarse</button>
         </form>
       </div>
       <div className="form-container sign-in">
@@ -39,7 +40,7 @@ function Login() {
       <div className="toggle-container">
         <div className="toggle">
           <div className="toggle-panel toggle-left">
-            <img src={logoMach} alt="Logo de MACH" width="150" />
+            <img src={logoWhite} alt="Logo de MACH" width="150" />
             <h1>¡Registrate MACH!</h1>
             <p>¿Ya tienes una cuenta?</p>
             <button className="hidden" id="login" onClick={deactivateContainer}>Ingresa a tu cuenta</button>
