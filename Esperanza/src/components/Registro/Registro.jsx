@@ -10,11 +10,8 @@ const Formularioregistro = () => {
   const [Apellido, setApellido] = useState('');
   const [Telefono, setTelefono] = useState('');
   const [Rut, setRut] = useState('');
-  const [FechaNacimiento, setFechaNacimiento] = useState('');
   const [Email, setEmail] = useState('');
   const [Password, setPassword] = useState('');
-  const [Repassword, setRepassword] = useState('');
-  const [Reemail, setReemail] = useState('');
   const navigate = useNavigate();
 
   // Usa el hook useAlert para obtener el estado y la API de alerta
@@ -25,20 +22,13 @@ const Formularioregistro = () => {
 
     let hasError = true;
 
-    if (!Nombre || !Apellido || !Telefono || !Rut || !FechaNacimiento || !Email || !Reemail || !Password || !Repassword) {
+    if (!Nombre || !Apellido || !Telefono || !Rut || !Email) {
       alertApi.show("¡No llenaste correctamente los datos solicitados!", 'error');
       hasError = false;
     }
-    if (Email !== Reemail) {
-      alertApi.show("¡Los datos de Correo y Repetir Correo, no son iguales!", 'error');
-      hasError = false
-    }
-    if (Password !== Repassword) {
-      alertApi.show("¡Los datos de Contraseña y Repetir Contraseña, no son iguales!", 'error');
-      hasError = false
-    }
     return hasError;
   };
+
   const formatRut = (rut) => {
     // Formatear rut
     rut = rut.replace(/[^\dkK]/g, '');
@@ -91,14 +81,14 @@ const Formularioregistro = () => {
             className="border p-4"
             style={{
               margin: '50px auto',
-              backgroundColor: 'rgba(255, 255, 255, 0.15)',
+              backgroundColor: 'white',
               borderRadius: '10px',
               borderStyle: 'solid',
               borderColor: 'black',
               boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
             }}
           >
-            <h2 className="text-center">Datos Registro</h2>
+            <h1 className="text-center">Crear Cuenta</h1>
             <div className="form-Registro">
               <form onSubmit={handleSubmit} id="registroForm">
                 <div className="row">
@@ -122,28 +112,9 @@ const Formularioregistro = () => {
                     <input type="text" className="form-control" id="rut" placeholder="11.111.111-1" value={Rut} onChange={(e) => setRut(formatRut(e.target.value))} />
                     <div className="invalid-feedback">Please choose a username.</div>
                   </div>
-                  <div className="col-md-6 mb-3">
-                    <label htmlFor="FechaNacimiento" className="form-label">Fecha Nacimiento:</label>
-                    <input type="date" className="form-control" id="FechaNacimiento" placeholder="DD/MM/AAAA" value={FechaNacimiento} onChange={(e) => setFechaNacimiento(e.target.value)} />
-                  </div>
-                  <div className="col-md-6">
+                   <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Correo</label>
                     <input type="text" className="form-control" id="correo" placeholder="example@Email.com" value={Email} onChange={(e) => setEmail(e.target.value)} />
-                    <div className="invalid-feedback">Please choose a username.</div>
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="validationCustom02" className="form-label">Repetir Correo</label>
-                    <input type="text" className="form-control" id="repetirCorreo" placeholder="example@Email.com" value={Reemail} onChange={(e) => setReemail(e.target.value)} />
-                    <div className="invalid-feedback">Please choose a username.</div>
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="validationCustom02" className="form-label">Contraseña</label>
-                    <input type="password" className="form-control" id="contraseña" placeholder="*********" value={Password} onChange={(e) => setPassword(e.target.value)} />
-                    <div className="invalid-feedback">Please choose a username.</div>
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="validationCustom02" className="form-label">Repetir Contraseña</label>
-                    <input type="password" className="form-control" id="repetircontraseña" placeholder="*********" value={Repassword} onChange={(e) => setRepassword(e.target.value)} />
                     <div className="invalid-feedback">Please choose a username.</div>
                   </div>
                 </div> <br />
@@ -154,7 +125,7 @@ const Formularioregistro = () => {
                   </div>
                 )}
                 <div className="row" id="contendor-registro">
-                  <button type="submit" className="btn btn-primary btn-lg" id="boton-registro" onClick={showAlert}>Registrarse</button>
+                  <button type="submit" style={{color:'white'}} onClick={showAlert}>Registrarse</button>
                 </div>
                 <div className="col">
                 </div>
@@ -162,7 +133,7 @@ const Formularioregistro = () => {
             </div>
           </div>
         </div>
-      </main>
+      </main> 
     </>
 
   );
