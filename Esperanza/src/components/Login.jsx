@@ -6,22 +6,18 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import { Link } from 'react-router-dom';
 
+import axios from 'axios';
 
-const MySwal = withReactContent(Swal);
+
 
 function Login() {
+  const MySwal = withReactContent(Swal);
   const [isActive, setIsActive] = useState(false);
   const [isPasswordStep, setIsPasswordStep] = useState(false);
   const [userData, setUserData] = useState({
-    firstName: '',
-    lastName: '',
-    documentId: '',
-    phone: '',
-    email: '',
-    password: ''
+
   });
 
-  // Función para manejar los cambios de input
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     if (name === 'documentId') {
@@ -31,7 +27,7 @@ function Login() {
       }
     }
     setUserData({ ...userData, [name]: value });
-  };
+  }
 
   // Función para validar manualmente los campos requeridos
   const validateFields = () => {
@@ -50,10 +46,11 @@ function Login() {
   };
 
   // Función para manejar el envío del formulario de registro y validación de los datos ingresados
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     const isValid = validateFields();
     if (isValid) {
+      await axios.post("http://localhost:3000/Crear-usuario",userData);
       setIsPasswordStep(true);
       MySwal.fire({
         title: '¡Excelente!',
@@ -105,14 +102,15 @@ function Login() {
             />
             <input type="tel" name="phone" placeholder="Número de Teléfono" value={userData.phone} onChange={handleInputChange} />
             <input type="email" name="email" placeholder="Correo Electrónico" value={userData.email} onChange={handleInputChange} />
-            <button type="submit" style={{color:'white'}} >Continuar</button>
+            <input type="password" name="password" placeholder="Contraseña" value= {userData.Password} onChange={handleInputChange} />
+            <button style={{color:'white'}} >Continuar</button>
           </form>
         </div>
       ) : (
         <div className="form-container create-password">
           <form onSubmit={handleCreatePassword}>
             <h1>Crea tu contraseña</h1>
-            <input type="password" name="password" placeholder="Contraseña" value={userData.password} onChange={handleInputChange} />
+           
             <button type="submit">Registrarse</button>
           </form>
         </div>
@@ -148,6 +146,6 @@ function Login() {
       </div>
     </div>
   );
-}
-
+ };
 export default Login;
+
