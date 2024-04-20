@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import logoMach from '../img/logo-mach.png';
+import logoWhite from '../../Imagenes/logo-mach-blanco.png';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
@@ -102,7 +103,7 @@ function Login() {
             />
             <input type="tel" name="phone" placeholder="Número de Teléfono" value={userData.phone} onChange={handleInputChange} />
             <input type="email" name="email" placeholder="Correo Electrónico" value={userData.email} onChange={handleInputChange} />
-            <button type="submit">Continuar</button>
+            <button type="submit" style={{color:'white'}} >Continuar</button>
           </form>
         </div>
       ) : (
@@ -120,22 +121,22 @@ function Login() {
           <input type="email" name="email" placeholder="Correo Electrónico" value={userData.email} onChange={handleInputChange} />
           <input type="password" name="password" placeholder="Contraseña" value={userData.password} onChange={handleInputChange} />
           <a href="#">¿Olvidaste tu contraseña?</a>
-          <button type="submit">Ingresar</button>
+          <button type="submit" style={{color:'white'}}>Ingresar</button>
         </form>
       </div>
       <div className="toggle-container">
         <div className="toggle">
           <div className={`toggle-panel toggle-left ${!isActive ? "active" : ""}`}>
-            <img src={logoMach} alt="Logo de MACH" width="150" />
+            <img src={logoWhite} alt="Logo de MACH" width="150" />
             <h1>¡Registrate MACH!</h1>
             <p>¿Ya tienes una cuenta?</p>
-            <button id="login" onClick={deactivateContainer}>Ingresa a tu cuenta</button>
+            <button id="login" style={{color:'white'}} onClick={deactivateContainer}>Ingresa a tu cuenta</button>
           </div>
           <div className={`toggle-panel toggle-right ${isActive ? "active" : ""}`}>
             <img src={logoMach} alt="Logo de MACH" width="150" />
             <h1>¡Bienvenido a MACH!</h1>
             <p>Si no estás registrado puedes hacerlo aquí</p>
-            <button id="register" onClick={activateContainer}>Registrarse</button>
+            <button id="register" style={{color:'white'}} onClick={activateContainer}>Registrarse</button>
           </div>
         </div>
       </div>
