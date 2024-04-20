@@ -2,13 +2,13 @@ const User = require("../models/user-model");
 const bcrypt = require('bcrypt');
 
 const CrearUsuario = async (req, res) => {
-    const { Nombre, Apellido, Telefono, Rut, Email, Password } = req.body;
+    const { firstName, lastName, phone, documentId, email, Password } = req.body;
 
     // encriptar la password
-    const salt = bcrypt.genSaltSync();
-    const passwordEncripted = bcrypt.hashSync(Password, salt)
+    // const salt = bcrypt.genSaltSync();
+    // const passwordEncripted = bcrypt.hashSync(Password, salt)
 
-    const userExisting = await User.findOne({ Rut: Rut });
+    const userExisting = await User.findOne({ Rut: documentId });
     if (userExisting) {
         return res.status(400).json({
             code: 400,
@@ -19,12 +19,12 @@ const CrearUsuario = async (req, res) => {
 
     try {
         const nuevoUsuario = await User.create({
-            Nombre: Nombre,
-            Apellido: Apellido,
-            Telefono: Telefono,
-            Rut: Rut,
-            Email: Email,
-            Password: passwordEncripted
+            Nombre: firstName,
+            Apellido: lastName,
+            Telefono: phone,
+            Rut: documentId,
+            Email: email,
+            Password: Password
         });
 
         res.status(200).json({
