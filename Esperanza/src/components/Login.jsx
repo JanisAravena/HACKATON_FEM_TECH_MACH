@@ -4,6 +4,8 @@ import logoMach from '../img/logo-mach.png';
 import logoWhite from '../../Imagenes/logo-mach-blanco.png';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import { Link } from 'react-router-dom';
+
 import axios from 'axios';
 
 
@@ -82,7 +84,7 @@ function Login() {
   const deactivateContainer = () => setIsActive(false);
 
   return (
-    <div className={`container ${isActive ? "active" : ""}`} id="container">
+    <div className={`d-flex container ${isActive ? "active" : ""}`} id="container">
       {!isPasswordStep ? (
         <div className="form-container sign-up">
           <form onSubmit={handleRegister}>
@@ -120,6 +122,10 @@ function Login() {
           <input type="password" name="password" placeholder="Contraseña" value={userData.password} onChange={handleInputChange} />
           <a href="#">¿Olvidaste tu contraseña?</a>
           <button type="submit" style={{color:'white'}}>Ingresar</button>
+          <a className='ocultar'>¿No tienes un usuario?</a>
+          <Link to='/Login'>
+          <button href="/Login" className='ocultar'type="submit" style={{color:'white'}}>Regístrate</button>
+          </Link>
         </form>
       </div>
       <div className="toggle-container">
@@ -134,7 +140,7 @@ function Login() {
             <img src={logoMach} alt="Logo de MACH" width="150" />
             <h1>¡Bienvenido a MACH!</h1>
             <p>Si no estás registrado puedes hacerlo aquí</p>
-            <button id="register" style={{color:'white'}} onClick={activateContainer}>Registrarse</button>
+            <button  id="register" style={{color:'white'}} onClick={activateContainer}>Registrarse</button>
           </div>
         </div>
       </div>
