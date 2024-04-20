@@ -5,9 +5,7 @@ import logoWhite from '../../Imagenes/logo-mach-blanco.png';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import { Link } from 'react-router-dom';
-
 import axios from 'axios';
-
 
 
 function Login() {
@@ -121,7 +119,9 @@ function Login() {
           <input type="email" name="email" placeholder="Correo Electrónico" value={userData.email} onChange={handleInputChange} />
           <input type="password" name="password" placeholder="Contraseña" value={userData.password} onChange={handleInputChange} />
           <a href="#">¿Olvidaste tu contraseña?</a>
+          <Link to='/Header'>
           <button type="submit" style={{color:'white'}}>Ingresar</button>
+          </Link>
           <a className='ocultar'>¿No tienes un usuario?</a>
           <Link to='/Login'>
           <button href="/Login" className='ocultar'type="submit" style={{color:'white'}}>Regístrate</button>

@@ -24,27 +24,93 @@ header {
   }
 
 
-/* const Sidebar = () => {
-  return (
-    <aside className="sidebar">
-      <ul>
-        <li>Mis Finanzas</li>
-        <li>Supercartola</li>
-        <li>Mi Cuenta</li>
-        <li>Línea de Sobregiro</li>
-        <li>Alcancía</li>
-        <li>Otras Cuentas</li>
-        <li>Vale Vista</li>
-        <li>Mis Datos Personales</li>
-        <li>Notificaciones</li>
-        <li>Bloqueo Temporal Tarjetas</li>
-        <li>Portabilidad Financiera</li>
-        <li>BciPlus+</li>
-        <li>Mis Ofertas</li>
-      </ul>
-    </aside>
-  );
-};
+/* Banca.css */
+.main-header {
+  background-color: #ffffff; /* Cambia esto por el color real del encabezado */
+  padding: 10px 0; /* Ajusta el espaciado como sea necesario */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-export default Sidebar;
-   */
+.navbar {
+  display: flex;
+  justify-content: start;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 20px; /* Espacio entre los ítems del menú */
+  font-weight: bold; /* Si los elementos del menú son en negrita */
+  color: #5D3DBD; /* Cambia esto por el color real de los ítems del menú */
+  cursor: pointer;
+}
+
+.user-info {
+  color: #5D3DBD; /* Cambia esto por el color real del texto 'Hola, Usuario' */
+  font-weight: bold; /* Si el texto 'Hola, Usuario' es en negrita */
+}
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f9; /* Color de fondo general */
+  padding: 20px;
+}
+
+.homeContent {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px; /* Ajusta esto según el ancho máximo del contenido */
+}
+
+.homeBlock {
+  background: #ffffff; /* Fondo de los bloques de contenido */
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados como en la imagen */
+  text-align: center; /* Centra el texto en los bloques */
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para los bloques */
+  flex: 1; /* Distribuye los bloques de manera equitativa */
+  max-width: 300px; /* Ajusta la anchura máxima de los bloques */
+}
+
+.homeBlock img {
+  width: 80px; /* Ajusta el tamaño de la imagen como sea necesario */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.homeBlock h2 {
+  color: #5D3DBD; /* Cambia esto por el color real de los títulos */
+  font-size: 1.5em; /* Ajusta el tamaño del texto como sea necesario */
+}
+
+.homeBlock p {
+  color: #626262; /* Cambia esto por el color real del texto del párrafo */
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.homeBlock button {
+  background-color: #5D3DBD; /* Cambia esto por el color real del botón */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.homeBlock button:hover {
+  background-color: #4a328f; /* Oscurece el botón al pasar el mouse */
+}
