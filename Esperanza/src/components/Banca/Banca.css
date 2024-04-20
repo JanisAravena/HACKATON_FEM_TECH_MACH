@@ -1,0 +1,50 @@
+/* Estilos para la barra de navegación (Header) */
+header {
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+  
+  .user-info {
+    text-align: right;
+  }
+
+
+/* const Sidebar = () => {
+  return (
+    <aside className="sidebar">
+      <ul>
+        <li>Mis Finanzas</li>
+        <li>Supercartola</li>
+        <li>Mi Cuenta</li>
+        <li>Línea de Sobregiro</li>
+        <li>Alcancía</li>
+        <li>Otras Cuentas</li>
+        <li>Vale Vista</li>
+        <li>Mis Datos Personales</li>
+        <li>Notificaciones</li>
+        <li>Bloqueo Temporal Tarjetas</li>
+        <li>Portabilidad Financiera</li>
+        <li>BciPlus+</li>
+        <li>Mis Ofertas</li>
+      </ul>
+    </aside>
+  );
+};
+
+export default Sidebar;
+   */
